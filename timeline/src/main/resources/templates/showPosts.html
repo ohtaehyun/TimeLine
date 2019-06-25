@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>show Posts</title>
+</head>
+<body>
+<table border="1">
+    <tr th:each="post:${posts}">
+        <td th:text="${post.title}"></td>
+        <td th:text="${post.content}"></td>
+        <td th:text="${post.pTime}"></td>
+        <td><a th:href="@{'/'+${post.idx}}"> 이동</a></td>
+    </tr>
+</table>
+
+</body>
+</html>
